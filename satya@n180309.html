@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>satya</title>
+        <link rel="icon" href="chitti.png">
+        <link rel="stylesheet" href="CSSFILE.CSS.css">
+
+    </head>
+    <body>
+        <script>
+            function change(){
+                document.getElementById("p1.jpg").innerHTML="<h2>satya</h2>";
+            }
+            function unchange(){
+                document.getElementById("p2.jpg").src="satya.jpg";
+            }
+            
+        </script>
+        <div id="image">
+        <img src="chitti.png" width="90px" height="90px" id="image" onmouseover="change();" onmouseout="unchange();"></div>
+        <!-- <div id="div3">
+            <a href="#">
+                <img src="icon.jpg" height="50px" width="50px">
+                <ul>
+                    <li>Home</li>
+                    <li>Exam</li>
+                    <li>BRANCH</li>
+                    <li>CONTACT</li>
+                </ul>
+            </a>
+        </div> -->
+        <h1 class="heading" style="color:yellow ;">WEB DESIGN<sub style="color:aqua ;">N180309</sub></h1>
+
+        
+            <ul id ="menu">
+                <li><a href="#" onclick="window.location.reload();"><img src="home logo.jpg" title="HOME" height="50px" width="50px"></a></li>
+                <li><a href="#"><img src="Exam.jpg" height="50px" width="50px" title="EXAM"></a>
+                    <ul>
+                        <li><a href="manju.html">Register</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                    </ul>
+                <li>
+                    <a><img src="BTech-Course-Details.jpg" height="50px" width="50px" title="BRANCH"></a>
+                    <ul>
+                        <li>
+                            <a href="#">CSE</a>
+                            <ul>
+                                <li><a href="#">Faculty</a>
+                                    <ul>
+                                        <li><a href="Register.html">Register</a></li>
+                                        <li><a href="Login.html">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Students</a>
+                                    <ul>
+                                        <li><a href="Register.html">Register</a></li>
+                                        <li><a href="Login.html">Login</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">ECE</a></li>
+                        <li><a href="#">MECH</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html"><img src="MOBILE.jpg" height="50px" width="50px" title="CONTACT"></a>
+            <ul>
+                <li><a href="map.html">MAP</a></li>
+            </ul>    
+
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+            <div id = "leftbox">
+                <input type="text"  style="color:white id="myInput" onkeyup="myFunction()" placeholder="Find The colors..." title="Type in a name">
+                
+                
+                <ul id="myUL">
+                    <li style="color:white ;"><a href="#"  >Brown</a></li>
+                    <li><a href="#">Green</a></li>
+                    <li><a href="#">Red</a></li>
+                    <li><a href="#">Blue </a></li>
+                    <li><a href="#">Yellow</a></li>
+                    <li><a href="#">Orange </a></li>
+                    <li><a href="#">Grey</a></li>
+                    <li><a href="#">Black </a></li>
+                    <li><a href="#">White</a></li>
+                    <li><a href="#">Sky blue </a></li>
+                    <li><a href="#">Violet </a></li>
+                    <li><a href="#">Indigo</a></li>
+                </ul>
+
+
+                <script>
+                function myFunction() {
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("myUL");
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } 
+                    else {
+                        li[i].style.display = "none";
+                    }
+                    }
+                }
+                </script>
+                </div> 
+                  
+                <div id = "middlebox">
+                    <div class="slideshow-container">
+
+                        <div class="satya slide">
+                          <div class="numbertext">1 / 5</div>
+                          <image id="i1" src="iit3.jpg" width="700px" height="330px">
+                          
+                        </div>
+                        <div class="satya slide">
+                            <div class="numbertext">2 / 3</div>
+                            <image id="i2" src="iit1.jpg" width="700px" height="330px">
+                        </div>
+
+                        <div class="satya slide">
+                            <div class="numbertext">3 / 4</div>
+                            <image id="i2" src="iit2.avif" width="700px" height="330px">
+                        </div>
+                            
+                       
+                        <div class="satya slide">
+                          <div class="numbertext">4 / 5</div>
+                          <image id="i3" src="iit4.jpg" width="700px" height="330px">
+                        </div>
+
+                        <div class="satya slide">
+                            <div class="numbertext">5 / 5</div>
+                            <image id="i2" src="iit5.jpg" width="700px" height="330px">
+                        </div>
+                          
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                          <span class="dot" onclick="currentSlide(4)"></span> 
+                          <span class="dot" onclick="currentSlide(5)"></span> 
+                        </div>
+                        
+                        <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("satya slide");
+                          let dots = document.getElementsByClassName("dot");
+                          if (n > slides.length) {slideIndex = 1}    
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";  
+                          dots[slideIndex-1].className += " active";
+                        }
+                        </script>
+                </div>
+                  
+                <div id = "rightbox">
+                    <center><h2>Vehicles</h2></center>
+                    <div>
+                        <marquee direction="up" id="marq">
+                            <a href="https://rathoredesign.com/?gclid=CjwKCAjwt7SWBhAnEiwAx8ZLas_BWzPU_Makh97biS69cLLqDagC-_bHFJURVdzDLJqXXwi6SK2TjxoCc_0QAvD_BwE"><h2>Car</h2></a>
+                            <a href="https://cets.apsche.ap.gov.in/EAPCET/Eapcet/EAPCET_HomePage.aspx"><h2>Bus</h2></a>
+                            <a href="https://jeemain.nta.nic.in/about-jeemain-2022/"><h2>Bike</h2></a>
+                            <a href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202022"><h2>Scooter</h2></a>
+                            <a href="https://indianexpress.com/article/education/gate-2022-saurabh-singh-environmental-science-engineering-topper-preparation-tips-7824821/"><h2>Motor cycle</h2></a>
+                            <a href="https://news.careers360.com/cat-2022-notification-month-iim-bangalore-likely-conduct-mba-entrance-exam"><h2>Bicycle</h2></a>
+                            <a href="https://news.careers360.com/iit-jam-2022-second-admission-list-out-check-opening-and-closing-score-here"><h2>Lorry</h2></a>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <footer id="foot">
+                <p><small>copy rights &copy; 2021 satya@copyrights</div></small></p>
+                <div class="footc">
+                    ViewCount:
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=8003940&style=0001&nbdigits=5&type=page&initCount=100" title="Free Counter" Alt="web counter"   border="0" /></a> 
+                </div>
+                </footer>
+    </body>
+</html>

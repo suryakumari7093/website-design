@@ -1,0 +1,256 @@
+<html>
+    <head>
+        <title>Javascript Validations</title>
+        <script type="text/javascript">
+        
+        let ch_count=0;
+           function validation(){
+               var fn=document.getElementById("e1").value;
+               var r1=/^\w+$/;
+               var mn=document.getElementById("e2").value;
+               var ln=document.getElementById("e3").value;
+               var adrs=document.getElementById("e9").value;
+               var pw=document.getElementById("e7").value;
+               var mail=document.getElementById("e6").value;
+               var ph=document.getElementById("e5").value;
+               var cntry=document.getElementById("ii").value;
+               var ch1=document.getElementById("eh1").checked;
+               var ch2=document.getElementById("eh2").checked;
+               var ch3=document.getElementById("eh3").checked;
+               var ch4=document.getElementById("eh4").checked;
+            var r2=fn+" "+mn;
+            var r3=/^\d{10}$/;
+            var r4=/^\d{3}-\d{4}-\d{3}$/;
+            var r5=/^\w+(.|-|_)?\w+@(\w|-|.)+\.?\w+?\.\w{2,3}$/;
+             var fulln=document.getElementById("e4").innerHTML=r2;
+            
+             if(fn.length<4)
+            {   document.getElementById("e1").style.border="5px solid red";
+                document.getElementById("l1").style.visibility="visible";
+                 return false;
+            }
+               if(ln.length<4)
+             {
+                document.getElementById("e3").style.border="5px solid red";
+                document.getElementById("l3").style.visibility="visible";
+               return false
+        }
+            if(!r1.test(fn))
+            {
+                document.getElementById("e1").style.border="5px solid red";
+                document.getElementById("l1").style.visibility="visible";
+               return false;
+            }
+                if(!r1.test(ln))
+             {
+                document.getElementById("e3").style.border="5px solid red";
+                document.getElementById("l3").style.visibility="visible";
+                return false;
+            }
+                 if(!r1.test(mn))
+             {
+                document.getElementById("e2").style.border="5px solid red";
+                document.getElementById("l2").style.visibility="visible";
+                 return false;
+                }
+             if(adrs==""){
+                document.getElementById("e9").style.border="5px solid red";
+                 document.getElementById("l8").style.visibility="visible";
+                 return false;
+             }
+             if(pw=="" || pw.length<7)
+             {
+                document.getElementById("e7").style.border="5px solid red";
+                document.getElementById("l6").style.visibility="visible";
+                return false;
+            }
+             if(!r5.test(mail))
+            {
+                document.getElementById("e6").style.border="5px solid red";
+                document.getElementById("l5").style.visibility="visible";
+               return false;
+            }
+             var sub=confirm("Are you sure submitting the form?");
+            if(!sub){
+                alert("Cannot submit");
+                return false;
+            }
+        }
+        </script>
+        <style type="text/css">
+            div{
+                background-color:pink;
+                width:65%;
+                border-radius: 3px;
+                border-width: 5px;
+                border-color: blueviolet;
+                 /* background-image:url("logoo.jpg");  */
+                /* background-repeat: no-repeat; */
+                 border:3px solid blue;
+                 padding:10px;
+                background-image:repeating-linear-gradient(to left,pink,lightsalmon,plum,beige,white,violet,lightblue,lightpink,moccasin,palegoldenrod,palegreen,paleturquoise);
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div>
+            <form action="\js.php" method="post" onsubmit="return validation();" onreset="return reset_ok();">
+            <table>
+                <h1><b><big><u>Student Registration Form</u></big></b></h1>
+                <tr>
+                    <td>
+                        <big><b>First Name:</b></big>
+                  </td>
+                  <td>
+                        <input type="text" name="n" placeholder="Enter your first name" 
+                        id="e1">
+                    </td>
+                    <td><label id="l1" style="color:red;visibility:hidden">Invalid First name</label></td>
+                </tr> 
+             <tr>
+                    <td>
+                        <big><b>Middle Name:</b></big>
+                    </td>
+                    <td>
+                        <input type="text" id="e2">
+                    </td>
+                    <td><label id="l2" style="color:red;visibility:hidden">Invalid Middle Name</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <big><b>Last Name:</b></big>
+                    </td>
+                    <td>
+                        <input type="text"  placeholder="Enter your last name"
+                         id="e3">
+                    </td>
+                    <td><label id="l3" style="color:red;visibility:hidden">Invalid Last Name</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <big><b>Full Name:</b></big>
+                    </td>
+                    <td>
+                        <input type="text"
+                         id="e4" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <big><b>Country:</b></big>
+                    </td>
+                    <td><select id="ii">
+                        <option id="o1">India</option>
+                        <option id="o2">USA</option>
+                    </select>
+                </tr>
+                  <tr>
+                    <td>
+                        <big><b>Phone No:</b></big>
+                    </td>
+                    <td>
+                        <input type="text"
+                         id="e5">
+                    </td>
+                    <td><label id="l4" style="color:red;visibility:hidden">Invalid phone number</label></td>
+                </tr> 
+                <tr>
+                    <td>
+                        <big><b>Email:</b></big>
+                    </td>
+                    <td>
+                        <input type="email" id="e6" required>
+                    </td>
+                    <td><label id="l5" style="color:red;visibility:hidden">Invalid enail</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <big><b>Password:</b></big>
+                    </td>
+                    <td>
+                        <input type="password" id="e7">
+                   <img id="ey1" src="hiddeneye.jpg" width="20px" height="10px" onclick="eye1();">
+                   <img id="ey2" src="eyeicon.jpg" width="20px" height="10px" onclick="eye2();" >
+                </td>
+
+                    <td><label id="l6" style="color:red;visibility:hidden">Invalid password</label></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <big><b>Hobbies:</b></big>
+                    </td>
+                    <td id="eh">
+                        <input type="checkbox" id="eh1">
+                        <label for="eh1">Reading</label>
+                        <input type="checkbox" id="eh2">
+                        <label for="eh3">Playing</label>
+                        <input type="checkbox" id="eh3">
+                        <label for="eh4">Writing</label>
+                      <input type="checkbox" id="eh4">
+                        <label for="eh2">Browsing</label>
+                    </td>
+                    <td>
+                        <label id="l10" style="color:red;visibility:hidden" >Select atleast 2 hobbies</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><big><b><label for="e8">Upload your image:</label></b></big>
+                        <input type="file" id="e8" accept="image/jpg/png">
+                    </td>
+                    <td><label id="l7" style="color:red;visibility:hidden">Invalid image</label></td>
+                </tr>
+
+                 <tr>
+                    <td><big><b>Address:</b></big></td>
+                    <td>
+                        <textarea id="e9" rows="3" cols="50"></textarea>
+                    </td>
+                    <td><label id="l8" style="color:red;visibility:hidden">Invalid Address</label></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <big><b>Date Of Birth:</b></big>
+                    </td>
+                    <td>
+                        <input type="date" id="e10">
+                    </td>
+                </tr>
+            <tr>
+                    <td><big><b>Gender:</b></big></td>
+                    <td><input type="radio" id="male"><label for="male">Male</label>
+                    <input type="radio" id="female"><label for="female">Female</label></td>
+                </tr>
+                <tr>
+                    <td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="e11">
+                        <big><label for="e12">I agree to the terms and conditions of the company</label>
+                    </big></tr> 
+                    <tr>
+                        <td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                    </tr>
+                 <tr>
+                    <td>
+                        <button type="reset"="Reset" id="e12">Reset</button>
+                    </td>
+                    <td>
+                        <button type="submit"="Submit" id="e13">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </center>
+    </body>
+</html>
